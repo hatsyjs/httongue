@@ -1,0 +1,69 @@
+{
+  "name": "@hatsy/hten",
+  "version": "1.0.0-dev.0",
+  "description": "Hypertext Encoders",
+  "keywords": [
+    "css-escape",
+    "encode-uri-component",
+    "html-escape",
+    "xml-escape"
+  ],
+  "homepage": "https://github.com/hatsyjs/hten",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:hatsyjs/hten.git"
+  },
+  "license": "MIT",
+  "author": "Ruslan Lopatin <ruslan.lopatin@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/hatsyjs/hten/issues"
+  },
+  "type": "module",
+  "main": "dist/hten.cjs",
+  "module": "dist/hten.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/hten.js",
+      "require": "./dist/hten.cjs"
+    }
+  },
+  "devDependencies": {
+    "@proc7ts/eslint-config": "^2.0.5",
+    "@proc7ts/rollup-helpers": "^1.0.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@types/jest": "^26.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "codecov": "^3.8.1",
+    "eslint": "^7.12.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "fs-extra": "^9.0.1",
+    "gh-pages": "^3.1.0",
+    "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
+    "rollup": "^2.33.1",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "run-z": "^1.6.0",
+    "shx": "^0.3.3",
+    "strip-ansi": "^6.0.0",
+    "ts-jest": "^26.4.3",
+    "tslib": "^2.0.3",
+    "typedoc": "^0.19.0",
+    "typedoc-plugin-external-module-name": "^4.0.3",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "all": "run-z build,lint,test",
+    "build": "run-z +z --then rollup --config ./rollup.config.js",
+    "ci:all": "run-z all +test/--ci/--runInBand",
+    "clean": "run-z +z --then shx rm -rf d.ts dist target",
+    "doc": "run-z +z --then typedoc",
+    "doc:publish": "run-z doc --then gh-pages --dist target/typedoc --dotfiles",
+    "lint": "run-z +z --then eslint .",
+    "test": "run-z +z --then jest",
+    "z": "run-z +bootstrap,+doc,+lint,+test"
+  }
+}
