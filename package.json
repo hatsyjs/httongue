@@ -1,7 +1,7 @@
 {
   "name": "@hatsy/hten",
   "version": "1.0.0-dev.0",
-  "description": "Hypertext encoders",
+  "description": "Hypertext encodings",
   "keywords": [
     "css-escape",
     "encode-uri-component",

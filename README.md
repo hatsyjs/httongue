@@ -1,5 +1,5 @@
-Hypertext Encoders
-==================
+Hypertext Encodings
+===================
 
 [![NPM][npm-image]][npm-url]
 [![Build Status][build-status-img]][build-status-link]
