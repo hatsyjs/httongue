@@ -49,34 +49,36 @@ export function escapeCSS(text: string): string {
 
     const c = text.charCodeAt(i);
 
-    if (c < 0x20) {
-      if (!c) {
-        // If the character is NULL (U+0000), then the REPLACEMENT CHARACTER (U+FFFD).
-        out += '\uFFFD';
-      } else {
-        // If the character is in the range [\1-\1f] (U+0001 to U+001F)
-        // then the character escaped as code point.
-        out += `\\${c.toString(16)} `;
-      }
-    } else if (
-        // If the character is greater than or equal to U+0080,
-        c > 0x7f
-        // or is in one of the ranges [a-z] (U+0061 to U+007A),
-        || (c > 0x60 && c < 0x7b)
-        // or [A-Z] (U+0041 to U+005A),
-        || (c > 0x40 && c < 0x5b)
-        // or [0-9] (U+0030 to U+0039),
-        || (c > 0x2f && c < 0x3a)
+    if (
+        // Is in range [a-z] (U+0061 to U+007A),
+        (c > 0x60 && c < 0x7b)
         // or is "-" (U+002D),
         || c === 0x2d
         // or is "_" (U+005F)
         || c === 0x5f
+        // or is in range [0-9] (U+0030 to U+0039),
+        || (c > 0x2f && c < 0x3a)
+        // or is in range [A-Z] (U+0041 to U+005A)
+        || (c > 0x40 && c < 0x5b)
     ) {
       // then the character itself.
       out += text[i];
-    } else if (c === 0x7f) {
-      // If the character is U+007F then the character escaped as code point.
-      out += `\\${c.toString(16)} `;
+    } else if (c > 0x7e) {
+      out += c === 0x7f
+          // If the character is U+007F
+          // then the character escaped as code point.
+          ? `\\${c.toString(16)} `
+          // If the character is greater than or equal to U+0080,
+          // then the character itself
+          : text[i];
+    } else if (c < 0x20) {
+      out += c
+          // If the character is in the range [\1-\1f] (U+0001 to U+001F)
+          // then the character escaped as code point.
+          ? `\\${c.toString(16)} `
+          // If the character is NULL (U+0000)
+          // then the REPLACEMENT CHARACTER (U+FFFD).
+          : '\uFFFD';
     } else {
       // Otherwise, the escaped character.
       out += `\\${text[i]}`;
