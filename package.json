@@ -1,6 +1,6 @@
 {
   "name": "@hatsy/hten",
-  "version": "1.0.0-dev.0",
+  "version": "1.0.0",
   "description": "Hypertext encodings",
   "keywords": [
     "css-escape",
