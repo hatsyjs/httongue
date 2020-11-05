@@ -10,13 +10,18 @@ Hypertext Encodings
 Contains the following functions:
 
 - [`decodeURLComponent(string): string`][decodeURLComponent] - Decodes URL component.
+
   In contrast to standard [decodeURIComponent] function this one decodes `+` signs as spaces.
-- [`escapeCSS(string): string`][escapeCSS] - Escapes CSS identifier accordingly to rules defined for [CSS.escape]
+
+- [`escapeCSS(string): string`][escapeCSS] - Escapes CSS identifier accordingly to the rules defined for [CSS.escape]
   utility method.
+
 - [`escapeCSSVal(string): string`][escapeCSSVal] - Escapes CSS value to be included into CSS string.
+
 - [`escapeXML(string): string`][escapeXML] - Replaces XML-unsafe characters with corresponding
   [predefined XML entities].
-  Available also under `escapeHTML` alias.
+
+  `escapeHTML(string): string` is an alias of [escapeXML].
 
 [npm-image]: https://img.shields.io/npm/v/@hatsy/hten.svg?logo=npm
 [npm-url]: https://www.npmjs.com/package/@hatsy/hten

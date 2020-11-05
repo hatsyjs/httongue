@@ -3,7 +3,8 @@
  * @module @hatsy/hten
  */
 /**
- * Escapes CSS identifier accordingly to rules defined for [CSS.escape()](https://drafts.csswg.org/cssom/#the-css.escape%28%29-method) utility method.
+ * Escapes CSS identifier accordingly to the rules defined for [CSS.escape()](https://drafts.csswg.org/cssom/#the-css.escape%28%29-method)
+ * utility method.
  *
  * Can be applied to CSS values as well, although it escapes characters that don't strictly need to be escaped.
  * A {@link escapeCSSVal} is a better alternative for that.
