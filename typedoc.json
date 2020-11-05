@@ -8,7 +8,8 @@
     "**/*.spec.ts"
   ],
   "excludeNotExported": true,
-  "mode": "minimal",
+  "mode": "file",
+  "theme": "minimal",
   "name": "Hypertext Encoders",
   "out": "./target/typedoc",
   "tsconfig": "tsconfig.main.json"
