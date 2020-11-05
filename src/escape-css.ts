@@ -8,9 +8,9 @@
  * Can be applied to CSS values as well, although it escapes characters that don't strictly need to be escaped.
  * A {@link escapeCSSVal} is a better alternative for that.
  *
- * @param text  CSS text to escape.
+ * @param text  A text to escape.
  *
- * @returns CSS text safe to be used as identifier, e.g. withing CSS selector.
+ * @returns A string safe to be used as CSS identifier, e.g. as CSS selector.
  */
 export function escapeCSS(text: string): string {
 
