@@ -26,12 +26,14 @@ export default {
       format: 'cjs',
       sourcemap: true,
       entryFileNames: '[name].cjs',
+      chunkFileNames: '_[name].cjs',
     },
     {
       dir: '.',
       format: 'esm',
       sourcemap: true,
       entryFileNames: 'dist/[name].js',
+      chunkFileNames: 'dist/_[name].js',
       plugins: [
         flatDts({
           tsconfig: 'tsconfig.main.json',
