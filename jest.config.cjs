@@ -24,7 +24,7 @@ module.exports = {
     [
       'jest-junit',
       {
-        suiteName: '@hatsy/hten',
+        suiteName: '@frontmeans/httongue',
         outputDirectory: './target/test-results',
         classNameTemplate: '{classname}: {title}',
         titleTemplate: '{classname}: {title}',

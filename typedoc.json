@@ -10,7 +10,7 @@
   "excludeNotExported": true,
   "mode": "file",
   "theme": "minimal",
-  "name": "Hypertext Encoders",
+  "name": "Hypertext Tongue",
   "out": "./target/typedoc",
   "tsconfig": "tsconfig.main.json"
 }

@@ -7,7 +7,7 @@ import typescript from 'typescript';
 
 export default {
   input: {
-    hten: './src/index.ts',
+    httongue: './src/index.ts',
   },
   plugins: [
     commonjs(),

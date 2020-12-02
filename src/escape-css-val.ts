@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @hatsy/hten
+ * @module @frontmeans/httongue
  */
 /**
  * Escapes CSS value to be included into CSS string.

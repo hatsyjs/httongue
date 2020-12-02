@@ -1,5 +1,5 @@
-Hypertext Encodings
-===================
+Hypertext Tongue
+================
 
 [![NPM][npm-image]][npm-url]
 [![Build Status][build-status-img]][build-status-link]
@@ -7,7 +7,7 @@ Hypertext Encodings
 [![GitHub Project][github-image]][github-url]
 [![API Documentation][api-docs-image]][API documentation]
 
-Contains the following functions:
+Contains Hypertext-related encoding and decoding functions:
 
 - [`decodeURLComponent(string): string`][decodeURLComponent] - Decodes URL component.
 
@@ -23,21 +23,21 @@ Contains the following functions:
 
   `escapeHTML(string): string` is an alias of [escapeXML].
 
-[npm-image]: https://img.shields.io/npm/v/@hatsy/hten.svg?logo=npm
-[npm-url]: https://www.npmjs.com/package/@hatsy/hten
-[build-status-img]: https://github.com/hatsyjs/hten/workflows/Build/badge.svg
-[build-status-link]: https://github.com/hatsyjs/hten/actions?query=workflow%3ABuild
-[codecov-image]: https://codecov.io/gh/hatsyjs/hten/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/hatsyjs/hten
+[npm-image]: https://img.shields.io/npm/v/@frontmeans/httongue.svg?logo=npm
+[npm-url]: https://www.npmjs.com/package/@frontmeans/httongue
+[build-status-img]: https://github.com/frontmeans/httongue/workflows/Build/badge.svg
+[build-status-link]: https://github.com/frontmeans/httongue/actions?query=workflow%3ABuild
+[codecov-image]: https://codecov.io/gh/frontmeans/httongue/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/frontmeans/httongue
 [github-image]: https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational
-[github-url]: https://github.com/hatsyjs/hten
+[github-url]: https://github.com/frontmeans/httongue
 [api-docs-image]: https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational
-[API documentation]: https://hatsyjs.github.io/hten/ 
+[API documentation]: https://frontmeans.github.io/httongue/ 
 
-[decodeURLComponent]: https://hatsyjs.github.io/hten/globals.html#decodeURLComponent
-[escapeCSS]: https://hatsyjs.github.io/hten/globals.html#escapeCSS
-[escapeCSSVal]: https://hatsyjs.github.io/hten/globals.html#escapeCSSVal
-[escapeXML]: https://hatsyjs.github.io/hten/globals.html#escapeXML
+[decodeURLComponent]: https://frontmeans.github.io/httongue/globals.html#decodeURLComponent
+[escapeCSS]: https://frontmeans.github.io/httongue/globals.html#escapeCSS
+[escapeCSSVal]: https://frontmeans.github.io/httongue/globals.html#escapeCSSVal
+[escapeXML]: https://frontmeans.github.io/httongue/globals.html#escapeXML
 
 [decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 [CSS.escape]: https://drafts.csswg.org/cssom/#the-css.escape%28%29-method

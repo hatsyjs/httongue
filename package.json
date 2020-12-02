@@ -1,30 +1,30 @@
 {
-  "name": "@hatsy/hten",
+  "name": "@frontmeans/httongue",
   "version": "1.1.2",
-  "description": "Hypertext encodings",
+  "description": "Hypertext tongue",
   "keywords": [
     "css-escape",
-    "encode-uri-component",
+    "decode-uri-component",
     "html-escape",
     "xml-escape"
   ],
-  "homepage": "https://github.com/hatsyjs/hten",
+  "homepage": "https://github.com/frontmeans/htongue",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:hatsyjs/hten.git"
+    "url": "ssh://git@github.com:frontmeans/htongue.git"
   },
   "license": "MIT",
   "author": "Ruslan Lopatin <ruslan.lopatin@gmail.com>",
   "bugs": {
-    "url": "https://github.com/hatsyjs/hten/issues"
+    "url": "https://github.com/frontmeans/htongue/issues"
   },
   "type": "module",
-  "main": "./dist/hten.cjs",
-  "module": "./dist/hten.js",
+  "main": "./dist/httongue.cjs",
+  "module": "./dist/httongue.js",
   "types": "./index.d.ts",
   "exports": {
-    "import": "./dist/hten.js",
-    "require": "./dist/hten.cjs"
+    "import": "./dist/httongue.js",
+    "require": "./dist/httongue.cjs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",

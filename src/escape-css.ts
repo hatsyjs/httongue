@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @hatsy/hten
+ * @module @frontmeans/httongue
  */
 /**
  * Escapes CSS identifier accordingly to the rules defined for [CSS.escape()](https://drafts.csswg.org/cssom/#the-css.escape%28%29-method)
