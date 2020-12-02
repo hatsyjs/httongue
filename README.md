@@ -23,6 +23,8 @@ Contains Hypertext-related encoding and decoding functions:
 
   `escapeHTML(string): string` is an alias of [escapeXML].
 
+- [`hyphenateName(string): string`][hyphenateName] - Hyphenates camel-cased property names.
+
 [npm-image]: https://img.shields.io/npm/v/@frontmeans/httongue.svg?logo=npm
 [npm-url]: https://www.npmjs.com/package/@frontmeans/httongue
 [build-status-img]: https://github.com/frontmeans/httongue/workflows/Build/badge.svg
@@ -38,6 +40,7 @@ Contains Hypertext-related encoding and decoding functions:
 [escapeCSS]: https://frontmeans.github.io/httongue/globals.html#escapeCSS
 [escapeCSSVal]: https://frontmeans.github.io/httongue/globals.html#escapeCSSVal
 [escapeXML]: https://frontmeans.github.io/httongue/globals.html#escapeXML
+[hyphenateName]: https://frontmeans.github.io/httongue/globals.html#hyphenateName
 
 [decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 [CSS.escape]: https://drafts.csswg.org/cssom/#the-css.escape%28%29-method
