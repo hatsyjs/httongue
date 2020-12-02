@@ -9,7 +9,7 @@
  *
  * [serialize a string]: https://drafts.csswg.org/cssom/#serialize-a-string
  *
- * @param text  A text to escape.
+ * @param text - A text to escape.
  *
  * @returns A string safe to be included into CSS value, e.g. within CSS string.
  */

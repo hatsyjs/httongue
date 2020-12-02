@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @module @frontmeans/httongue
  */
-import { replaceXMLPredef } from './xml-predef.impl';
+import { replaceXMLPredef } from './escape-xml.impl';
 
 /**
  * Replaces XML-unsafe characters with corresponding [predefined XML entities](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML).
@@ -10,7 +10,7 @@ import { replaceXMLPredef } from './xml-predef.impl';
  * Uses the shortest possible entities representation. I.e. `&#34;` instead of `&quot;`, and `&#39;' instead of
  * `&apos;`.
  *
- * @param text  A text to escape.
+ * @param text - A text to escape.
  *
  * @returns XML-safe text.
  */

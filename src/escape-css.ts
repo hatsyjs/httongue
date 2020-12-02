@@ -9,7 +9,7 @@
  * Can be applied to CSS values as well, although it escapes characters that don't strictly need to be escaped.
  * A {@link escapeCSSVal} is a better alternative for that.
  *
- * @param text  A text to escape.
+ * @param text - A text to escape.
  *
  * @returns A string safe to be used as CSS identifier, e.g. as CSS selector.
  */
