@@ -2,23 +2,7 @@
  * @packageDocumentation
  * @module @frontmeans/httongue
  */
-/**
- * @internal
- */
-const xmlPredef: Readonly<Record<string, string>> = {
-  '"': '&#34;',
-  '&': '&amp;',
-  '\'': '&#39;',
-  '<': '&lt;',
-  '>': '&gt;',
-};
-
-/**
- * @internal
- */
-function replaceXMLPredef(char: string): string {
-  return xmlPredef[char];
-}
+import { replaceXMLPredef } from './xml-predef.impl';
 
 /**
  * Replaces XML-unsafe characters with corresponding [predefined XML entities](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML).
