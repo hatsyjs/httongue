@@ -60,6 +60,9 @@
 		<li class=" tsd-kind-function">
 			<a href="globals.html#escapeXML" class="tsd-kind-icon">escapeXML</a>
 		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#hyphenateName" class="tsd-kind-icon">hyphenate<wbr>Name</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
@@ -87,6 +90,8 @@
 					<a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML">predefined XML entities</a>.</p>
 					<p><code>escapeHTML(string): string</code> is an alias of <a href="https://frontmeans.github.io/httongue/globals.html#escapeXML">escapeXML</a>.</p>
 				</li>
+				<li><p><a href="https://frontmeans.github.io/httongue/globals.html#hyphenateName"><code>hyphenateName(string): string</code></a> - Hyphenates camel-cased property names.</p>
+				</li>
 			</ul>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
@@ -107,6 +112,7 @@
 							<li class="tsd-kind-function"><a href="globals.html#escapeCSS" class="tsd-kind-icon">escapeCSS</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#escapeCSSVal" class="tsd-kind-icon">escapeCSSVal</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#escapeXML" class="tsd-kind-icon">escapeXML</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#hyphenateName" class="tsd-kind-icon">hyphenate<wbr>Name</a></li>
 						</ul>
 					</section>
 				</div>
@@ -124,7 +130,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/ebe66b5/src/decode-url-component.ts#L12">decode-url-component.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/decode-url-component.ts#L16">decode-url-component.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -137,9 +143,13 @@
 						<ul class="tsd-parameters">
 							<li>
 								<h5>url: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>URL component to decode.</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>Decoded URL component.</p>
 					</li>
 				</ul>
 			</section>
@@ -153,7 +163,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/ebe66b5/src/escape-css.ts#L16">escape-css.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/escape-css.ts#L16">escape-css.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -188,7 +198,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/ebe66b5/src/escape-css-val.ts#L16">escape-css-val.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/escape-css-val.ts#L16">escape-css-val.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -221,7 +231,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/ebe66b5/src/escape-xml.ts#L17">escape-xml.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/escape-xml.ts#L17">escape-xml.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -241,6 +251,60 @@
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						<p>XML-safe text.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="hyphenateName" class="tsd-anchor"></a>
+				<h3>hyphenate<wbr>Name</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">hyphenate<wbr>Name<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/hyphenate-name.ts#L42">hyphenate-name.ts:42</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Hyphenates a camel-cased property name.</p>
+							</div>
+							<p>Applicable to CSS property names.</p>
+							<p>Converts:</p>
+							<ul>
+								<li><p><code>backgroundColor</code> to <code>background-color</code>.</p>
+									<p> Uppercase letters converted to lower case and prepended by hyphen,</p>
+								</li>
+								<li><p><code>MozTransition</code> to <code>-moz-transition</code>.</p>
+									<p>The very first uppercase letter is prepended by hyphen too.</p>
+								</li>
+								<li><p><code>MSTransition</code> to <code>-ms-transition</code>.</p>
+									<p>Subsequent upper-case letters converted to lower case. The first and the last ones prepended by hyphen.</p>
+								</li>
+								<li><p><code>someURL</code> to <code>some-url</code></p>
+									<p>Subsequent upper-case letters in the very end of the string converted to lower case and prepended by hyphen.</p>
+								</li>
+								<li><p><code>color</code> to <code>color</code>.</p>
+									<p>All lower-case names remain as is.</p>
+								</li>
+								<li><p><code>padding-left</code> to <code>padding-left</code></p>
+									<p>Hyphens remain in place.</p>
+								</li>
+							</ul>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>name: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Camel-cased CSS property name.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>Hyphenated CSS property name.</p>
 					</li>
 				</ul>
 			</section>
