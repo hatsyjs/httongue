@@ -23,7 +23,11 @@ Contains Hypertext-related encoding and decoding functions:
 
   `escapeHTML(string): string` is an alias of [escapeXML].
 
-- [`hyphenateName(string): string`][hyphenateName] - Hyphenates camel-cased property names.
+- [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased names, and its variants:
+  - [`hyphenateCSSName(string): string`][hyphenateCSSName] - Hyphenates camel-cased CSS property names
+    (handles `ms` vendor prefix and caches the results).
+  - [`hyphenateDecapName(string): string`][hyphenateDecapName] - De-capitalizes a camel-cased name and hyphenates it
+    (no leading hyphen).
 
 [npm-image]: https://img.shields.io/npm/v/@frontmeans/httongue.svg?logo=npm
 [npm-url]: https://www.npmjs.com/package/@frontmeans/httongue
@@ -40,6 +44,8 @@ Contains Hypertext-related encoding and decoding functions:
 [escapeCSS]: https://frontmeans.github.io/httongue/globals.html#escapeCSS
 [escapeCSSVal]: https://frontmeans.github.io/httongue/globals.html#escapeCSSVal
 [escapeXML]: https://frontmeans.github.io/httongue/globals.html#escapeXML
+[hyphenateCSSName]: https://frontmeans.github.io/httongue/globals.html#hyphenateCSSName
+[hyphenateDecapName]: https://frontmeans.github.io/httongue/globals.html#hyphenateDecapName
 [hyphenateName]: https://frontmeans.github.io/httongue/globals.html#hyphenateName
 
 [decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
