@@ -61,6 +61,12 @@
 			<a href="globals.html#escapeXML" class="tsd-kind-icon">escapeXML</a>
 		</li>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#hyphenateCSSName" class="tsd-kind-icon">hyphenateCSSName</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#hyphenateDecapName" class="tsd-kind-icon">hyphenate<wbr>Decap<wbr>Name</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#hyphenateName" class="tsd-kind-icon">hyphenate<wbr>Name</a>
 		</li>
 	</ul>
@@ -90,7 +96,17 @@
 					<a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML">predefined XML entities</a>.</p>
 					<p><code>escapeHTML(string): string</code> is an alias of <a href="https://frontmeans.github.io/httongue/globals.html#escapeXML">escapeXML</a>.</p>
 				</li>
-				<li><p><a href="https://frontmeans.github.io/httongue/globals.html#hyphenateName"><code>hyphenateName(string): string</code></a> - Hyphenates camel-cased property names.</p>
+				<li><p><a href="https://frontmeans.github.io/httongue/globals.html#hyphenateName"><code>hyphenateName(string): string</code></a> - Hyphenates a camel-cased name</p>
+					<p><strong>May add a leading hyphen</strong> if the first letter of the name is in upper case.</p>
+					<p>Has variants:</p>
+					<ul>
+						<li><p><a href="https://frontmeans.github.io/httongue/globals.html#hyphenateCSSName"><code>hyphenateCSSName(string): string</code></a> - Hyphenates camel-cased CSS property name.</p>
+							<p>Handles <code>ms</code> vendor prefix and caches the results.</p>
+						</li>
+						<li><p><a href="https://frontmeans.github.io/httongue/globals.html#hyphenateDecapName"><code>hyphenateDecapName(string): string</code></a> - De-capitalizes a camel-cased name and hyphenates it.</p>
+							<p>No leading hyphen added.</p>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</div>
@@ -112,6 +128,8 @@
 							<li class="tsd-kind-function"><a href="globals.html#escapeCSS" class="tsd-kind-icon">escapeCSS</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#escapeCSSVal" class="tsd-kind-icon">escapeCSSVal</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#escapeXML" class="tsd-kind-icon">escapeXML</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#hyphenateCSSName" class="tsd-kind-icon">hyphenateCSSName</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#hyphenateDecapName" class="tsd-kind-icon">hyphenate<wbr>Decap<wbr>Name</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#hyphenateName" class="tsd-kind-icon">hyphenate<wbr>Name</a></li>
 						</ul>
 					</section>
@@ -130,7 +148,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/decode-url-component.ts#L16">decode-url-component.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/decode-url-component.ts#L16">decode-url-component.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -163,7 +181,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/escape-css.ts#L16">escape-css.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/escape-css.ts#L16">escape-css.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -198,7 +216,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/escape-css-val.ts#L16">escape-css-val.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/escape-css-val.ts#L16">escape-css-val.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -231,7 +249,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/escape-xml.ts#L17">escape-xml.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/escape-xml.ts#L17">escape-xml.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -255,6 +273,76 @@
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="hyphenateCSSName" class="tsd-anchor"></a>
+				<h3>hyphenateCSSName</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">hyphenateCSSName<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/hyphenate.ts#L78">hyphenate.ts:78</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Hyphenates a camel-cased CSS property key.</p>
+							</div>
+							<p>Applicable to the names of <code>HTMLElement.style</code> properties, including vendor-specific ones.</p>
+							<p>Calls <a href="globals.html#hyphenateName">hyphenateName</a>, then replaces <code>ms-</code> prefix with <code>-ms-</code> one. Other vendor-specific prefixes are
+							capitalized, so the hyphen prefix is added already.</p>
+							<p>Caches hyphenated names for the sake of speed.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>name: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Camel-cased CSS property name to hyphenate.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>Hyphenated CSS property name.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="hyphenateDecapName" class="tsd-anchor"></a>
+				<h3>hyphenate<wbr>Decap<wbr>Name</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">hyphenate<wbr>Decap<wbr>Name<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/hyphenate.ts#L57">hyphenate.ts:57</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>De-capitalizes a camel-cased name and hyphenates it.</p>
+							</div>
+							<p>Calls <a href="globals.html#hyphenateName">hyphenateName</a>, then removes the leading hyphen.</p>
+							<p>Thus, e.g. <code>MozTransition</code> would be converted to <code>moz-transition</code> rather to <code>-moz-transition</code>.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>name: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Camel-cased name to hyphenate.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>Hyphenated name.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="hyphenateName" class="tsd-anchor"></a>
 				<h3>hyphenate<wbr>Name</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -264,12 +352,12 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/22e3e7e/src/hyphenate-name.ts#L42">hyphenate-name.ts:42</a></li>
+								<li>Defined in <a href="https://github.com/frontmeans/httongue/blob/e5e74ac/src/hyphenate.ts#L42">hyphenate.ts:42</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Hyphenates a camel-cased property name.</p>
+								<p>Hyphenates a camel-cased name.</p>
 							</div>
 							<p>Applicable to CSS property names.</p>
 							<p>Converts:</p>
@@ -299,12 +387,12 @@
 							<li>
 								<h5>name: <span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>Camel-cased CSS property name.</p>
+									<p>Camel-cased name to hyphenate.</p>
 								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						<p>Hyphenated CSS property name.</p>
+						<p>Hyphenated name.</p>
 					</li>
 				</ul>
 			</section>
