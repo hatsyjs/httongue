@@ -23,11 +23,20 @@ Contains Hypertext-related encoding and decoding functions:
 
   `escapeHTML(string): string` is an alias of [escapeXML].
 
-- [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased names, and its variants:
-  - [`hyphenateCSSName(string): string`][hyphenateCSSName] - Hyphenates camel-cased CSS property names
-    (handles `ms` vendor prefix and caches the results).
-  - [`hyphenateDecapName(string): string`][hyphenateDecapName] - De-capitalizes a camel-cased name and hyphenates it
-    (no leading hyphen).
+- [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased name
+  
+  **May add a leading hyphen** if the first letter of the name is in upper case.
+  
+  Has variants:
+  
+  - [`hyphenateCSSName(string): string`][hyphenateCSSName] - Hyphenates camel-cased CSS property name.
+    
+    Handles `ms` vendor prefix and caches the results.
+
+  - [`hyphenateDecapName(string): string`][hyphenateDecapName] - De-capitalizes a camel-cased name and hyphenates it.
+    
+    No leading hyphen added.
+
 
 [npm-image]: https://img.shields.io/npm/v/@frontmeans/httongue.svg?logo=npm
 [npm-url]: https://www.npmjs.com/package/@frontmeans/httongue
