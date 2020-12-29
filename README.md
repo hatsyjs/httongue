@@ -49,13 +49,13 @@ Contains Hypertext-related encoding and decoding functions:
 [api-docs-image]: https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational
 [API documentation]: https://frontmeans.github.io/httongue/ 
 
-[decodeURLComponent]: https://frontmeans.github.io/httongue/globals.html#decodeURLComponent
-[escapeCSS]: https://frontmeans.github.io/httongue/globals.html#escapeCSS
-[escapeCSSVal]: https://frontmeans.github.io/httongue/globals.html#escapeCSSVal
-[escapeXML]: https://frontmeans.github.io/httongue/globals.html#escapeXML
-[hyphenateCSSName]: https://frontmeans.github.io/httongue/globals.html#hyphenateCSSName
-[hyphenateDecapName]: https://frontmeans.github.io/httongue/globals.html#hyphenateDecapName
-[hyphenateName]: https://frontmeans.github.io/httongue/globals.html#hyphenateName
+[decodeURLComponent]: https://frontmeans.github.io/httongue/globals.html#decodeurlcomponent
+[escapeCSS]: https://frontmeans.github.io/httongue/globals.html#escapecss
+[escapeCSSVal]: https://frontmeans.github.io/httongue/globals.html#escapecssval
+[escapeXML]: https://frontmeans.github.io/httongue/globals.html#escapexml
+[hyphenateCSSName]: https://frontmeans.github.io/httongue/globals.html#hyphenatecssname
+[hyphenateDecapName]: https://frontmeans.github.io/httongue/globals.html#hyphenatedecapname
+[hyphenateName]: https://frontmeans.github.io/httongue/globals.html#hyphenatename
 
 [decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 [CSS.escape]: https://drafts.csswg.org/cssom/#the-css.escape%28%29-method
