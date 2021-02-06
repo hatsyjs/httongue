@@ -1,9 +1,4 @@
 /**
- * @packageDocumentation
- * @module @frontmeans/httongue
- */
-
-/**
  * Select MIME type.
  */
 export const enum MIMEType {

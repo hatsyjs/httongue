@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @frontmeans/httongue
- */
-/**
  * Escapes CSS value to be included into CSS string.
  *
  * Escapes accordingly to [serialize a string] algorithm.

@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @frontmeans/httongue
+ * @module Module @frontmeans/httongue
  */
 export * from './decode-url-component';
 export * from './escape-css';

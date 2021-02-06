@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @frontmeans/httongue
- */
 import { hyphenateCSSName$cache, toHyphenLower, uppercasePattern } from './hyphenate.impl';
 
 /**

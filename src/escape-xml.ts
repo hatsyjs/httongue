@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @frontmeans/httongue
- */
 import { replaceXMLPredef } from './escape-xml.impl';
 
 /**
