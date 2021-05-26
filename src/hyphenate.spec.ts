@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { hyphenateCSSName, hyphenateDecapName, hyphenateName } from './hyphenate';
 
 describe('hyphenateName', () => {

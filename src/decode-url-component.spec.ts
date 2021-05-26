@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { decodeURLComponent } from './decode-url-component';
 
 describe('decodeURLComponent', () => {

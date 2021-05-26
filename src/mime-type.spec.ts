@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { MIMEType } from './mime-type';
 
 describe('MIME', () => {
