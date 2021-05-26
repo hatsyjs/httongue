@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { escapeCSS } from './escape-css';
 
 describe('escapeCSS', () => {

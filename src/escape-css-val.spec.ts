@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { escapeCSSVal } from './escape-css-val';
 
 describe('escapeCSSVal', () => {
