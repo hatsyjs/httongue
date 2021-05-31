@@ -3,6 +3,8 @@ Hypertext Tongue
 
 [![NPM][npm-image]][npm-url]
 [![Build Status][build-status-img]][build-status-link]
+[![Code Quality][quality-img]][quality-link]
+[![Coverage][coverage-img]][coverage-link]
 [![GitHub Project][github-image]][github-url]
 [![API Documentation][api-docs-image]][API documentation]
 
@@ -41,6 +43,10 @@ Contains Hypertext-related encoding and decoding functions:
 [npm-url]: https://www.npmjs.com/package/@frontmeans/httongue
 [build-status-img]: https://github.com/frontmeans/httongue/workflows/Build/badge.svg
 [build-status-link]: https://github.com/frontmeans/httongue/actions?query=workflow%3ABuild
+[quality-img]: https://app.codacy.com/project/badge/Grade/3e795785caa143e59efede543dec762d
+[quality-link]: https://www.codacy.com/gh/frontmeans/httongue/dashboard?utm_source=github.com&utm_medium=referral&utm_content=frontmeans/httongue&utm_campaign=Badge_Grade
+[coverage-img]: https://app.codacy.com/project/badge/Coverage/3e795785caa143e59efede543dec762d
+[coverage-link]: https://www.codacy.com/gh/frontmeans/httongue/dashboard?utm_source=github.com&utm_medium=referral&utm_content=frontmeans/httongue&utm_campaign=Badge_Coverage
 [github-image]: https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational
 [github-url]: https://github.com/frontmeans/httongue
 [api-docs-image]: https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational
