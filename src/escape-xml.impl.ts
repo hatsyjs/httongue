@@ -4,7 +4,7 @@
 const xmlPredef: Readonly<Record<string, string>> = {
   '"': '&#34;',
   '&': '&amp;',
-  '\'': '&#39;',
+  "'": '&#39;',
   '<': '&lt;',
   '>': '&gt;',
 };

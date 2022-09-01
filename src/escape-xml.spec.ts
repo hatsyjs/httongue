@@ -12,6 +12,6 @@ describe('escapeXML', () => {
     expect(escapeHTML('"test"')).toBe('&#34;test&#34;');
   });
   it('escapes single quotes', () => {
-    expect(escapeHTML('\'test\'')).toBe('&#39;test&#39;');
+    expect(escapeHTML("'test'")).toBe('&#39;test&#39;');
   });
 });

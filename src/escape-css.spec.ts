@@ -62,7 +62,7 @@ describe('escapeCSS', () => {
       expect(escapeCSS('$')).toBe('\\$');
       expect(escapeCSS('%')).toBe('\\%');
       expect(escapeCSS('&')).toBe('\\&');
-      expect(escapeCSS('\'')).toBe('\\\'');
+      expect(escapeCSS("'")).toBe("\\'");
       expect(escapeCSS('(')).toBe('\\(');
       expect(escapeCSS(')')).toBe('\\)');
       expect(escapeCSS('*')).toBe('\\*');

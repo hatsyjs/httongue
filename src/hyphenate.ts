@@ -51,7 +51,6 @@ export function hyphenateName(name: string): string {
  * @returns Hyphenated name.
  */
 export function hyphenateDecapName(name: string): string {
-
   const hyphenated = hyphenateName(name);
 
   return hyphenated.startsWith('-') ? hyphenated.substr(1) : hyphenated;
@@ -72,7 +71,6 @@ export function hyphenateDecapName(name: string): string {
  * @returns Hyphenated CSS property name.
  */
 export function hyphenateCSSName(name: string): string {
-
   const found = hyphenateCSSName$cache.get(name);
 
   if (found) {

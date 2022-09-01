@@ -2,7 +2,6 @@
  * Select MIME type.
  */
 export const enum MIMEType {
-
   /**
    * `text/css`
    */
@@ -69,5 +68,4 @@ export const enum MIMEType {
    * section 3)
    */
   TextXML = 'text/xml',
-
 }
