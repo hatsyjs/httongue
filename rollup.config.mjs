@@ -1,6 +1,5 @@
 import { defineConfig } from 'rollup';
 import flatDts from 'rollup-plugin-flat-dts';
-import sourcemaps from 'rollup-plugin-sourcemaps';
 import ts from 'rollup-plugin-typescript2';
 import typescript from 'typescript';
 
@@ -15,7 +14,6 @@ export default defineConfig({
       cacheRoot: 'target/.rts2_cache',
       useTsconfigDeclarationDir: true,
     }),
-    sourcemaps(),
   ],
   output: {
     dir: '.',
