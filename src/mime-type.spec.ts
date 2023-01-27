@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { MIMEType } from './mime-type';
+import { MIMEType } from './mime-type.js';
 
 describe('MIME', () => {
   it('contains JSON definitions', () => {

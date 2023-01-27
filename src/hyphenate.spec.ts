@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { hyphenateCSSName, hyphenateDecapName, hyphenateName } from './hyphenate';
+import { hyphenateCSSName, hyphenateDecapName, hyphenateName } from './hyphenate.js';
 
 describe('hyphenateName', () => {
   it('converts upper-case letters to lower case and hyphens them', () => {

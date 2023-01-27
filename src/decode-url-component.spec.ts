@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { decodeURLComponent } from './decode-url-component';
+import { decodeURLComponent } from './decode-url-component.js';
 
 describe('decodeURLComponent', () => {
   it('decodes `+` signs as spaces', () => {

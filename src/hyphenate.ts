@@ -1,4 +1,4 @@
-import { hyphenateCSSName$cache, toHyphenLower, uppercasePattern } from './hyphenate.impl';
+import { hyphenateCSSName$cache, toHyphenLower, uppercasePattern } from './hyphenate.impl.js';
 
 /**
  * Hyphenates a camel-cased name.
