@@ -1,7 +1,7 @@
 /**
  * Select MIME type.
  */
-export const enum MIMEType {
+export enum MIMEType {
   /**
    * `text/css`
    */
