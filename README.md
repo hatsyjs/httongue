@@ -21,7 +21,7 @@ Hypertext and other web-related codecs.
 - [`escapeXML(string): string`][escapeXML] - Replaces XML-unsafe characters with corresponding
   [predefined XML entities].
 
-  `escapeHTML(string): string` is an alias of [escapeXML].
+  [`escapeHTML(string): string`][escapeHTML] is an alias of [escapeXML].
 
 - [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased name
 
@@ -52,6 +52,7 @@ Hypertext and other web-related codecs.
 [decodeURLComponent]: https://hatsyjs.github.io/httongue/functions/decodeURLComponent.html
 [escapeCSS]: https://hatsyjs.github.io/httongue/functions/escapeCSS.html
 [escapeCSSVal]: https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html
+[escapeHTML]: https://hatsyjs.github.io/httongue/modules.html#escapeHTML
 [escapeXML]: https://hatsyjs.github.io/httongue/functions/escapeXML.html
 [hyphenateCSSName]: https://hatsyjs.github.io/httongue/functions/hyphenateCSSName.html
 [hyphenateDecapName]: https://hatsyjs.github.io/httongue/functions/hyphenateDecapName.html
