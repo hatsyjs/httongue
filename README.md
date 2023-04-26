@@ -41,9 +41,9 @@ Hypertext and other web-related codecs.
 [npm-url]: https://www.npmjs.com/package/httongue
 [build-status-img]: https://github.com/hatsyjs/httongue/workflows/Build/badge.svg
 [build-status-link]: https://github.com/hatsyjs/httongue/actions?query=workflow%3ABuild
-[quality-img]: https://app.codacy.com/project/badge/Grade/3e795785caa143e59efede543dec762d
-[quality-link]: https://www.codacy.com/gh/hatsyjs/httongue/dashboard?utm_source=github.com&utm_medium=referral&utm_content=hatsyjs/httongue&utm_campaign=Badge_Grade
-[coverage-img]: https://app.codacy.com/project/badge/Coverage/3e795785caa143e59efede543dec762d
+[quality-img]: https://app.codacy.com/project/badge/Grade/67c2c4c63f1342569d693d27288749bf
+[quality-link]: https://app.codacy.com/gh/hatsyjs/httongue/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+[coverage-img]: https://app.codacy.com/project/badge/Coverage/67c2c4c63f1342569d693d27288749bf
 [coverage-link]: https://www.codacy.com/gh/hatsyjs/httongue/dashboard?utm_source=github.com&utm_medium=referral&utm_content=hatsyjs/httongue&utm_campaign=Badge_Coverage
 [github-image]: https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational
 [github-url]: https://github.com/hatsyjs/httongue
