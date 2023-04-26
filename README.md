@@ -49,6 +49,32 @@ Hypertext and other web-related codecs.
 [hyphenateCSS]: https://hatsyjs.github.io/httongue/functions/hyphenateCSS.html
 [CSS.escape()]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
 
+## JavaScript
+
+- [`escapeJsString(string): string`][escapeJsString] - Escapes a string to be included into JavaScript string literal.
+
+  Handles all kinds of quotes (`'`, `"`, and `\``) and special chars. Converts non-ASCII chars to corresponding
+  Unicode escapes.
+
+- [`jsPropertyAccessor(string, quote?): string`][jsPropertyAccessor] - Creates JavaScript property accessor expression.
+
+  If accessed property `key` is valid JavaScript identifier, then creates a `.${key}` accessor. Otherwise, creates an
+  accessor like `['${key}']` with `key` properly quoted.
+
+- [`jsStringLiteral(string, quote?): string`][jsStringLiteral] - Creates JavaScript string literal.
+
+  Encloses the string into quotes and properly escapes it.
+
+- [`quoteJsKey(string, quote?): string`][quoteJsKey] - Conditionally quotes JavaScript key.
+
+  If the given `key` is valid JavaScript identifier, then leaves it as is. Otherwise, encloses it into quotes and
+  properly escapes if necessary.
+
+[escapeJsString]: https://hatsyjs.github.io/httongue/functions/escapeJsString.html
+[jsPropertyAccessor]: https://hatsyjs.github.io/httongue/functions/jsPropertyAccessor.html
+[jsStringLiteral]: https://hatsyjs.github.io/httongue/functions/jsStringLiteral.html
+[quoteJsKey]: https://hatsyjs.github.io/httongue/functions/quoteJsKey.html
+
 ## URI
 
 - [`decodeURISearchPart(string): string`][decodeURISearchPart] - Decodes part of URI search string, i.e. either search

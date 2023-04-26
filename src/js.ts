@@ -78,8 +78,8 @@ export function quoteJsKey(key: string, quote: "'" | '"' | '`' = "'"): string {
 /**
  * Creates JavaScript property accessor expression.
  *
- * If accessed property `key` is valid JavaScript identifier, then creates a `.${key}` accessor. Otherwise, creates a
- * an accessor like `['${key}']` with `key` properly {@link quoteJsKey quoted}.
+ * If accessed property `key` is valid JavaScript identifier, then creates a `.${key}` accessor. Otherwise, creates an
+ * accessor like `['${key}']` with `key` properly {@link quoteJsKey quoted}.
  *
  * @param key - Accessed property key.
  * @param quote - Quote symbol to use.
