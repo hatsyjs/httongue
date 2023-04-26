@@ -47,7 +47,7 @@ Hypertext and other web-related codecs.
 [escapeCSS]: https://hatsyjs.github.io/httongue/functions/escapeCSS.html
 [escapeCSSVal]: https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html
 [hyphenateCSS]: https://hatsyjs.github.io/httongue/functions/hyphenateCSS.html
-[CSS.escape]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
+[CSS.escape()]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
 
 ## URI
 
