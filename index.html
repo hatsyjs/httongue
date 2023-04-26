@@ -19,30 +19,65 @@
 <a href="https://github.com/hatsyjs/httongue"><img src="https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational" alt="GitHub Project"></a>
 <a href="https://hatsyjs.github.io/httongue/"><img src="https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational" alt="API Documentation"></a></p>
 <p>Hypertext and other web-related codecs.</p>
-<ul>
-<li><p><a href="https://hatsyjs.github.io/httongue/functions/decodeURLComponent.html"><code>decodeURLComponent(string): string</code></a> - Decodes URL component.</p>
-<p>In contrast to standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent">decodeURIComponent</a> function this one decodes <code>+</code> signs as spaces.</p>
+<a id="md:html-and-xml" class="tsd-anchor"></a><h2><a href="#md:html-and-xml">HTML and XML</a></h2><ul>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/escapeXML.html"><code>escapeXML(string): string</code></a> - Replaces XML-unsafe characters with corresponding
+<a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML">predefined XML entities</a>.</p>
 </li>
-<li><p><a href="https://hatsyjs.github.io/httongue/functions/escapeCSS.html"><code>escapeCSS(string): string</code></a> - Escapes CSS identifier accordingly to the rules defined for <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape">CSS.escape</a>
+<li><p><a href="https://hatsyjs.github.io/httongue/modules.html#escapeHTML"><code>escapeHTML(string): string</code></a> is an alias of <a href="https://hatsyjs.github.io/httongue/functions/escapeXML.html">escapeXML</a>.</p>
+</li>
+</ul>
+<a id="md:css" class="tsd-anchor"></a><h2><a href="#md:css">CSS</a></h2><ul>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/escapeCSS.html"><code>escapeCSS(string): string</code></a> - Escapes CSS identifier accordingly to the rules defined for <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape">CSS.escape()</a>
 utility method.</p>
 </li>
 <li><p><a href="https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html"><code>escapeCSSVal(string): string</code></a> - Escapes CSS value to be included into CSS string.</p>
 </li>
-<li><p><a href="https://hatsyjs.github.io/httongue/functions/escapeXML.html"><code>escapeXML(string): string</code></a> - Replaces XML-unsafe characters with corresponding
-<a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML">predefined XML entities</a>.</p>
-<p><a href="https://hatsyjs.github.io/httongue/modules.html#escapeHTML"><code>escapeHTML(string): string</code></a> is an alias of <a href="https://hatsyjs.github.io/httongue/functions/escapeXML.html">escapeXML</a>.</p>
-</li>
-<li><p><a href="https://hatsyjs.github.io/httongue/functions/hyphenateName.html"><code>hyphenateName(string): string</code></a> - Hyphenates a camel-cased name</p>
-<p><strong>May add a leading hyphen</strong> if the first letter of the name is in upper case.</p>
-<p>Has variants:</p>
-<ul>
-<li><p><a href="https://hatsyjs.github.io/httongue/functions/hyphenateCSSName.html"><code>hyphenateCSSName(string): string</code></a> - Hyphenates camel-cased CSS property name.</p>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/hyphenateCSS.html"><code>hyphenateCSS(string): string</code></a> - Hyphenates camel-cased CSS property name.</p>
 <p>Handles <code>ms</code> vendor prefix and caches the results.</p>
 </li>
-<li><p><a href="https://hatsyjs.github.io/httongue/functions/hyphenateDecapName.html"><code>hyphenateDecapName(string): string</code></a> - De-capitalizes a camel-cased name and hyphenates it.</p>
-<p>No leading hyphen added.</p>
+</ul>
+<a id="md:javascript" class="tsd-anchor"></a><h2><a href="#md:javascript">JavaScript</a></h2><ul>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/escapeJsString.html"><code>escapeJsString(string): string</code></a> - Escapes a string to be included into JavaScript string literal.</p>
+<p>Handles all kinds of quotes (<code>&#39;</code>, <code>&quot;</code>, and ```) and special chars. Converts non-ASCII chars to corresponding
+Unicode escapes.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/jsPropertyAccessor.html"><code>jsPropertyAccessor(string, quote?): string</code></a> - Creates JavaScript property accessor expression.</p>
+<p>If accessed property <code>key</code> is valid JavaScript identifier, then creates a <code>.${key}</code> accessor. Otherwise, creates an
+accessor like <code>[&#39;${key}&#39;]</code> with <code>key</code> properly quoted.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/jsStringLiteral.html"><code>jsStringLiteral(string, quote?): string</code></a> - Creates JavaScript string literal.</p>
+<p>Encloses the string into quotes and properly escapes it.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/quoteJsKey.html"><code>quoteJsKey(string, quote?): string</code></a> - Conditionally quotes JavaScript key.</p>
+<p>If the given <code>key</code> is valid JavaScript identifier, then leaves it as is. Otherwise, encloses it into quotes and
+properly escapes if necessary.</p>
 </li>
 </ul>
+<a id="md:uri" class="tsd-anchor"></a><h2><a href="#md:uri">URI</a></h2><ul>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/decodeURISearchPart.html"><code>decodeURISearchPart(string): string</code></a> - Decodes part of URI search string, i.e. either search
+parameter name or value.</p>
+<p>In contrast to standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent">decodeURIComponent</a> function, this one treats <em>plus signs</em> (<code>&quot;+&quot; (U+002B)</code>) as spaces.
+I.e. decodes the same way as <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams</a> do.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/encodeURIPart.html"><code>encodeURIPart(string | number | boolean): string</code></a> - Encodes part of URI.</p>
+<p>In contrast to standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent</a> function, this one follows <a href="https://www.rfc-editor.org/rfc/rfc3986">RFC3869</a> requirements and percent-encodes
+all <a href="https://www.rfc-editor.org/rfc/rfc3986#section-2.2">URI reserved characters</a>.</p>
+<p>Standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent">decodeURIComponent</a> function can be used to decode URI.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/encodeURISearchPart.html"><code>encodeURISearchPart(string | number | boolean): string</code></a> - Encodes part of URI search string,
+i.e. either search parameter name or value.</p>
+<p>In contrast to standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent</a> function, this one encodes spaces as <em>plus signs</em> <code>&quot;+&quot; (U+002B)</code>.
+In addition, percent-encodes all <a href="https://www.rfc-editor.org/rfc/rfc3986#section-2.2">URI reserved characters</a> according to <a href="https://www.rfc-editor.org/rfc/rfc3986">RFC3869</a>.</p>
+</li>
+</ul>
+<a id="md:other" class="tsd-anchor"></a><h2><a href="#md:other">Other</a></h2><ul>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/capitalize.html"><code>capitalize(string): string</code></a> - Capitalizes input string.</p>
+<p>Converts the first Unicode code point of input string to upper case.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/decapitalize.html"><code>decapitalize(string): string</code></a> - De-capitalizes input string.</p>
+<p>Converts the first Unicode code point of input string to lower case.</p>
+</li>
+<li><p><a href="https://hatsyjs.github.io/httongue/functions/hyphenate.html"><code>hyphenate(string): string</code></a> - Hyphenates a camel-cased string.</p>
 </li>
 </ul>
 </div></div>
@@ -67,19 +102,33 @@ utility method.</p>
 <ul>
 <li>
 <ul>
-<li><a href="#md:hypertext-tongue"><span>Hypertext <wbr/>Tongue</span></a></li></ul></li></ul></div></details></div>
+<li><a href="#md:hypertext-tongue"><span>Hypertext <wbr/>Tongue</span></a></li>
+<li>
+<ul>
+<li><a href="#md:html-and-xml"><span>HTML and XML</span></a></li>
+<li><a href="#md:css"><span>CSS</span></a></li>
+<li><a href="#md:javascript"><span>Java<wbr/>Script</span></a></li>
+<li><a href="#md:uri"><span>URI</span></a></li>
+<li><a href="#md:other"><span>Other</span></a></li></ul></li></ul></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4-path"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)" id="icon-4-text"></path></svg><span>Hypertext <wbr/>Tongue</span></a>
 <ul class="tsd-small-nested-navigation">
 <li><a href="modules.html#escapeHTML"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4D82" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-8388608-path"></rect><path d="M10.354 17V8.24H13.066C13.586 8.24 14.042 8.348 14.434 8.564C14.826 8.772 15.13 9.064 15.346 9.44C15.562 9.816 15.67 10.256 15.67 10.76C15.67 11.352 15.514 11.86 15.202 12.284C14.898 12.708 14.482 13 13.954 13.16L15.79 17H14.518L12.838 13.28H11.434V17H10.354ZM11.434 12.308H13.066C13.514 12.308 13.874 12.168 14.146 11.888C14.418 11.6 14.554 11.224 14.554 10.76C14.554 10.288 14.418 9.912 14.146 9.632C13.874 9.352 13.514 9.212 13.066 9.212H11.434V12.308Z" fill="var(--color-text)" id="icon-8388608-text"></path></svg><span>escapeHTML</span></a></li>
 <li><a href="enums/MIMEType.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-enum)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-8-path"></rect><path d="M9.45 16V7.24H14.49V8.224H10.518V10.936H14.07V11.908H10.518V15.016H14.49V16H9.45Z" fill="var(--color-text)" id="icon-8-text"></path></svg><span>MIMEType</span></a></li>
-<li><a href="functions/decodeURLComponent.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>decodeURLComponent</span></a></li>
+<li><a href="functions/capitalize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>capitalize</span></a></li>
+<li><a href="functions/decapitalize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>decapitalize</span></a></li>
+<li><a href="functions/decodeURISearchPart.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>decodeURISearch<wbr/>Part</span></a></li>
+<li><a href="functions/encodeURIPart.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>encodeURIPart</span></a></li>
+<li><a href="functions/encodeURISearchPart.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>encodeURISearch<wbr/>Part</span></a></li>
 <li><a href="functions/escapeCSS.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>escapeCSS</span></a></li>
 <li><a href="functions/escapeCSSVal.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>escapeCSSVal</span></a></li>
+<li><a href="functions/escapeJsString.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>escape<wbr/>Js<wbr/>String</span></a></li>
 <li><a href="functions/escapeXML.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>escapeXML</span></a></li>
-<li><a href="functions/hyphenateCSSName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>hyphenateCSSName</span></a></li>
-<li><a href="functions/hyphenateDecapName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>hyphenate<wbr/>Decap<wbr/>Name</span></a></li>
-<li><a href="functions/hyphenateName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>hyphenate<wbr/>Name</span></a></li></ul></nav></div></div></div>
+<li><a href="functions/hyphenate.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>hyphenate</span></a></li>
+<li><a href="functions/hyphenateCSS.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>hyphenateCSS</span></a></li>
+<li><a href="functions/jsPropertyAccessor.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>js<wbr/>Property<wbr/>Accessor</span></a></li>
+<li><a href="functions/jsStringLiteral.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>js<wbr/>String<wbr/>Literal</span></a></li>
+<li><a href="functions/quoteJsKey.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>quote<wbr/>Js<wbr/>Key</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div></body></html>
