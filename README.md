@@ -40,15 +40,13 @@ Hypertext and other web-related codecs.
 
 - [`escapeCSSVal(string): string`][escapeCSSVal] - Escapes CSS value to be included into CSS string.
 
-- [`hyphenateCSSName(string): string`][hyphenateCSSName] - Hyphenates camel-cased CSS property name.
+- [`hyphenateCSS(string): string`][hyphenateCSS] - Hyphenates camel-cased CSS property name.
 
   Handles `ms` vendor prefix and caches the results.
 
-  No leading hyphen added.
-
 [escapeCSS]: https://hatsyjs.github.io/httongue/functions/escapeCSS.html
 [escapeCSSVal]: https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html
-[hyphenateCSSName]: https://hatsyjs.github.io/httongue/functions/hyphenateCSSName.html
+[hyphenateCSS]: https://hatsyjs.github.io/httongue/functions/hyphenateCSS.html
 [CSS.escape]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
 
 ## URI
