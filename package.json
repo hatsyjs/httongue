@@ -6,6 +6,7 @@
     "css-escape",
     "decode-uri-component",
     "html-escape",
+    "rfc3869",
     "xml-escape"
   ],
   "homepage": "https://github.com/hatsyjs/httongue",

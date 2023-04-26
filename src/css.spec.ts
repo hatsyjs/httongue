@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { escapeCSS } from './escape-css.js';
+import { escapeCSS } from './css.js';
 
 describe('escapeCSS', () => {
   describe('If the character is NULL (U+0000)', () => {

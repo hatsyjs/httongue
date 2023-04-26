@@ -1,5 +1,3 @@
-import { hyphenateCSSName$cache, toHyphenLower, uppercasePattern } from './hyphenate.impl.js';
-
 /**
  * Hyphenates a camel-cased name.
  *
@@ -36,7 +34,7 @@ import { hyphenateCSSName$cache, toHyphenLower, uppercasePattern } from './hyphe
  * @returns Hyphenated name.
  */
 export function hyphenateName(name: string): string {
-  return name.replace(uppercasePattern, toHyphenLower);
+  return name.replace(UPPERCASE_PATTERN, toHyphenLower);
 }
 
 /**
@@ -87,3 +85,18 @@ export function hyphenateCSSName(name: string): string {
 
   return hyphenated;
 }
+
+const UPPERCASE_PATTERN = /[A-Z]+/g;
+
+function toHyphenLower(letters: string, offset: number, str: string): string {
+  const lowerCase = letters.toLowerCase();
+
+  if (lowerCase.length > 1 && offset + lowerCase.length < str.length) {
+    // More than one subsequent upper-case letters, unless at the end of the string.
+    return `-${lowerCase.slice(0, -1)}-${lowerCase.slice(-1)}`;
+  }
+
+  return '-' + lowerCase;
+}
+
+const hyphenateCSSName$cache = /*#__PURE__*/ new Map<string, string>();

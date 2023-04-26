@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { escapeHTML, escapeXML } from './escape-xml.js';
+import { escapeHTML, escapeXML } from './xml.js';
 
 describe('escapeXML', () => {
   it('escapes HTML-unsafe symbols', () => {

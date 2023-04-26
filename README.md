@@ -9,34 +9,6 @@
 
 Hypertext and other web-related codecs.
 
-- [`decodeURLComponent(string): string`][decodeURLComponent] - Decodes URL component.
-
-  In contrast to standard [decodeURIComponent] function this one decodes `+` signs as spaces.
-
-- [`escapeCSS(string): string`][escapeCSS] - Escapes CSS identifier accordingly to the rules defined for [CSS.escape]
-  utility method.
-
-- [`escapeCSSVal(string): string`][escapeCSSVal] - Escapes CSS value to be included into CSS string.
-
-- [`escapeXML(string): string`][escapeXML] - Replaces XML-unsafe characters with corresponding
-  [predefined XML entities].
-
-  [`escapeHTML(string): string`][escapeHTML] is an alias of [escapeXML].
-
-- [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased name
-
-  **May add a leading hyphen** if the first letter of the name is in upper case.
-
-  Has variants:
-
-  - [`hyphenateCSSName(string): string`][hyphenateCSSName] - Hyphenates camel-cased CSS property name.
-
-    Handles `ms` vendor prefix and caches the results.
-
-  - [`hyphenateDecapName(string): string`][hyphenateDecapName] - De-capitalizes a camel-cased name and hyphenates it.
-
-    No leading hyphen added.
-
 [npm-image]: https://img.shields.io/npm/v/httongue.svg?logo=npm
 [npm-url]: https://www.npmjs.com/package/httongue
 [build-status-img]: https://github.com/hatsyjs/httongue/workflows/Build/badge.svg
@@ -49,14 +21,73 @@ Hypertext and other web-related codecs.
 [github-url]: https://github.com/hatsyjs/httongue
 [api-docs-image]: https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational
 [API documentation]: https://hatsyjs.github.io/httongue/
-[decodeURLComponent]: https://hatsyjs.github.io/httongue/functions/decodeURLComponent.html
-[escapeCSS]: https://hatsyjs.github.io/httongue/functions/escapeCSS.html
-[escapeCSSVal]: https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html
+
+## HTML and XML
+
+- [`escapeXML(string): string`][escapeXML] - Replaces XML-unsafe characters with corresponding
+  [predefined XML entities].
+
+- [`escapeHTML(string): string`][escapeHTML] is an alias of [escapeXML].
+
 [escapeHTML]: https://hatsyjs.github.io/httongue/modules.html#escapeHTML
 [escapeXML]: https://hatsyjs.github.io/httongue/functions/escapeXML.html
+[predefined XML entities]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML
+
+## CSS
+
+- [`escapeCSS(string): string`][escapeCSS] - Escapes CSS identifier accordingly to the rules defined for [CSS.escape()]
+  utility method.
+
+- [`escapeCSSVal(string): string`][escapeCSSVal] - Escapes CSS value to be included into CSS string.
+
+- [`hyphenateCSSName(string): string`][hyphenateCSSName] - Hyphenates camel-cased CSS property name.
+
+  Handles `ms` vendor prefix and caches the results.
+
+  No leading hyphen added.
+
+[escapeCSS]: https://hatsyjs.github.io/httongue/functions/escapeCSS.html
+[escapeCSSVal]: https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html
 [hyphenateCSSName]: https://hatsyjs.github.io/httongue/functions/hyphenateCSSName.html
+[CSS.escape]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
+
+## URI
+
+- [`decodeURISearchPart(string): string`][decodeURISearchPart] - Decodes part of URI search string, i.e. either search
+  parameter name or value.
+
+  In contrast to standard [decodeURIComponent] function, this one treats _plus signs_ (`"+" (U+002B)`) as spaces.
+  I.e. decodes the same way as [URLSearchParams] do.
+
+- [`encodeURIPart(string | number | boolean): string`][encodeURIPart] - Encodes part of URI.
+
+  In contrast to standard [encodeURIComponent] function, this one follows [RFC3869] requirements and percent-encodes
+  all [URI reserved characters].
+
+  Standard [decodeURIComponent] function can be used to decode URI.
+
+- [`encodeURISearchPart(string | number | boolean): string`][encodeURISearchPart] - Encodes part of URI search string,
+  i.e. either search parameter name or value.
+
+  In contrast to standard [encodeURIComponent] function, this one encodes spaces as _plus signs_ `"+" (U+002B)`.
+  In addition, percent-encodes all [URI reserved characters] according to [RFC3869].
+
+[decodeURISearchPart]: https://hatsyjs.github.io/httongue/functions/decodeURISearchPart.html
+[decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+[encodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+[encodeURIPart]: https://hatsyjs.github.io/httongue/functions/encodeURIPart.html
+[encodeURISearchPart]: https://hatsyjs.github.io/httongue/functions/encodeURISearchPart.html
+[URI reserved characters]: https://www.rfc-editor.org/rfc/rfc3986#section-2.2
+[RFC3869]: https://www.rfc-editor.org/rfc/rfc3986
+[URLSearchParams]: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams
+
+## Other
+
+- [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased name
+
+  **May add a leading hyphen** if the first letter of the name is in upper case.
+
+- [`hyphenateDecapName(string): string`][hyphenateDecapName] - De-capitalizes a camel-cased name and hyphenates it.
+
 [hyphenateDecapName]: https://hatsyjs.github.io/httongue/functions/hyphenateDecapName.html
 [hyphenateName]: https://hatsyjs.github.io/httongue/functions/hyphenateName.html
-[decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-[CSS.escape]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
-[predefined XML entities]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML
