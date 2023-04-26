@@ -49,13 +49,13 @@ Hypertext and other web-related codecs.
 [github-url]: https://github.com/hatsyjs/httongue
 [api-docs-image]: https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational
 [API documentation]: https://hatsyjs.github.io/httongue/
-[decodeURLComponent]: https://hatsyjs.github.io/httongue/modules.html#decodeURLComponent
-[escapeCSS]: https://hatsyjs.github.io/httongue/modules.html#escapeCSS
-[escapeCSSVal]: https://hatsyjs.github.io/httongue/modules.html#escapeCSSVal
-[escapeXML]: https://hatsyjs.github.io/httongue/modules.html#escapeXML
-[hyphenateCSSName]: https://hatsyjs.github.io/httongue/modules.html#hyphenateCSSName
-[hyphenateDecapName]: https://hatsyjs.github.io/httongue/modules.html#hyphenateDecapName
-[hyphenateName]: https://hatsyjs.github.io/httongue/modules.html#hyphenateName
+[decodeURLComponent]: https://hatsyjs.github.io/httongue/functions/decodeURLComponent.html
+[escapeCSS]: https://hatsyjs.github.io/httongue/functions/escapeCSS.html
+[escapeCSSVal]: https://hatsyjs.github.io/httongue/functions/escapeCSSVal.html
+[escapeXML]: https://hatsyjs.github.io/httongue/functions/escapeXML.html
+[hyphenateCSSName]: https://hatsyjs.github.io/httongue/functions/hyphenateCSSName.html
+[hyphenateDecapName]: https://hatsyjs.github.io/httongue/functions/hyphenateDecapName.html
+[hyphenateName]: https://hatsyjs.github.io/httongue/functions/hyphenateName.html
 [decodeURIComponent]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-[css.escape]: https://drafts.csswg.org/cssom/#the-css.escape%28%29-method
+[CSS.escape]: https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape
 [predefined XML entities]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML
