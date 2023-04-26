@@ -1,37 +1,39 @@
 import { describe, expect, it } from '@jest/globals';
-import { hyphenateCSSName, hyphenateDecapName, hyphenateName } from './hyphenate.js';
+import { hyphenate, hyphenateCSS } from './hyphenate.js';
 
-describe('hyphenateName', () => {
-  it('converts upper-case letters to lower case and hyphens them', () => {
-    expect(hyphenateName('backgroundColor')).toBe('background-color');
-    expect(hyphenateName('MozTransition')).toBe('-moz-transition');
+describe('hyphenate', () => {
+  it('removes the leading hyphen', () => {
+    expect(hyphenate('MozTransition')).toBe('moz-transition');
   });
   it('converts subsequent upper-case letters to lower case and hyphens the first and the last ones', () => {
-    expect(hyphenateName('MSTransition')).toBe('-ms-transition');
-  });
-  it('converts subsequent upper-case letters in the end to lower case and hyphens the first one', () => {
-    expect(hyphenateName('someURL')).toBe('some-url');
-  });
-});
-
-describe('hyphenateDecapName', () => {
-  it('removes the leading hyphen', () => {
-    expect(hyphenateDecapName('MozTransition')).toBe('moz-transition');
+    expect(hyphenate('MOZTransition')).toBe('moz-transition');
+    expect(hyphenate('encodeURIComponent')).toBe('encode-uri-component');
+    expect(hyphenate('encodeURI')).toBe('encode-uri');
   });
   it('removes leading hyphen from all-uppercase name', () => {
-    expect(hyphenateDecapName('URL')).toBe('url');
+    expect(hyphenate('URL')).toBe('url');
   });
   it('does not affect lower-case leading letters', () => {
-    expect(hyphenateDecapName('msTransition')).toBe('ms-transition');
+    expect(hyphenate('msTransition')).toBe('ms-transition');
   });
 });
 
-describe('hyphenateCSSName', () => {
+describe('hyphenateCSS', () => {
+  it('converts upper-case letters to lower case and hyphens them', () => {
+    expect(hyphenateCSS('backgroundColor')).toBe('background-color');
+    expect(hyphenateCSS('MozTransition')).toBe('-moz-transition');
+  });
+  it('converts subsequent upper-case letters to lower case and hyphens the first and the last ones', () => {
+    expect(hyphenateCSS('MOZTransition')).toBe('-moz-transition');
+  });
+  it('converts subsequent upper-case letters in the end to lower case and hyphens the first one', () => {
+    expect(hyphenateCSS('someURL')).toBe('some-url');
+  });
   it('handles `ms` prefix', () => {
-    expect(hyphenateCSSName('msTransition')).toBe('-ms-transition');
+    expect(hyphenateCSS('msTransition')).toBe('-ms-transition');
   });
   it('caches the result', () => {
-    expect(hyphenateCSSName('color')).toBe('color');
-    expect(hyphenateCSSName('color')).toBe('color');
+    expect(hyphenateCSS('color')).toBe('color');
+    expect(hyphenateCSS('color')).toBe('color');
   });
 });

@@ -25,6 +25,7 @@
     "types": "./dist/httongue.d.ts",
     "default": "./dist/httongue.js"
   },
+  "sideEffects": false,
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@run-z/eslint-config": "^3.3.1",

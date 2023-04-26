@@ -1,5 +1,5 @@
 /**
- * Hyphenates a camel-cased name.
+ * Hyphenates camel-cased string.
  *
  * Applicable to CSS property names.
  *
@@ -27,31 +27,15 @@
  *
  * - `padding-left` to `padding-left`
  *
- *   Hyphens remain in place.
+ * The leading upper-case letter is not prepended by hyphen. Thus, e.g. `MozTransition` would be converted to
+ * `moz-transition` rather to `-moz-transition`.
  *
- * @param name - Camel-cased name to hyphenate.
- *
- * @returns Hyphenated name.
- */
-export function hyphenateName(name: string): string {
-  return name.replace(UPPERCASE_PATTERN, toHyphenLower);
-}
-
-/**
- * De-capitalizes a camel-cased name and hyphenates it.
- *
- * Calls {@link hyphenateName}, then removes the leading hyphen.
- *
- * Thus, e.g. `MozTransition` would be converted to `moz-transition` rather to `-moz-transition`.
- *
- * @param name - Camel-cased name to hyphenate.
+ * @param input - Camel-cased input to hyphenate.
  *
  * @returns Hyphenated name.
  */
-export function hyphenateDecapName(name: string): string {
-  const hyphenated = hyphenateName(name);
-
-  return hyphenated.startsWith('-') ? hyphenated.substr(1) : hyphenated;
+export function hyphenate(input: string): string {
+  return input.replace(CAPITAL_PATTERN, toHyphenLowerButLeading);
 }
 
 /**
@@ -59,8 +43,8 @@ export function hyphenateDecapName(name: string): string {
  *
  * Applicable to the names of `HTMLElement.style` properties, including vendor-specific ones.
  *
- * Calls {@link hyphenateName}, then replaces `ms-` prefix with `-ms-` one. Other vendor-specific prefixes are
- * capitalized, so the hyphen prefix is added already.
+ * Prepends hyphen to leading capital letters, e.g. to vendor-specific prefixes. Replaces `ms-` prefix with `-ms-`
+ * one.
  *
  * Caches hyphenated names for the sake of speed.
  *
@@ -68,35 +52,48 @@ export function hyphenateDecapName(name: string): string {
  *
  * @returns Hyphenated CSS property name.
  */
-export function hyphenateCSSName(name: string): string {
-  const found = hyphenateCSSName$cache.get(name);
+export function hyphenateCSS(name: string): string {
+  const found = hyphenateCSS$cache.get(name);
 
   if (found) {
     return found;
   }
 
-  let hyphenated = hyphenateName(name);
+  let hyphenated = name.replace(CAPITAL_PATTERN, toHyphenLower);
 
   if (hyphenated.startsWith('ms-')) {
     hyphenated = '-' + hyphenated;
   }
 
-  hyphenateCSSName$cache.set(name, hyphenated);
+  hyphenateCSS$cache.set(name, hyphenated);
 
   return hyphenated;
 }
 
-const UPPERCASE_PATTERN = /[A-Z]+/g;
+const CAPITAL_PATTERN = /[A-Z]+/g;
+
+function toHyphenLowerButLeading(letters: string, offset: number, str: string): string {
+  const lowerCase = letters.toLowerCase();
+
+  if (lowerCase.length > 1 && offset + lowerCase.length < str.length) {
+    // More than one subsequent capital letters, unless at the end of the string.
+    return offset
+      ? `-${lowerCase.slice(0, -1)}-${lowerCase.slice(-1)}`
+      : `${lowerCase.slice(0, -1)}-${lowerCase.slice(-1)}`;
+  }
+
+  return offset ? `-${lowerCase}` : lowerCase;
+}
 
 function toHyphenLower(letters: string, offset: number, str: string): string {
   const lowerCase = letters.toLowerCase();
 
   if (lowerCase.length > 1 && offset + lowerCase.length < str.length) {
-    // More than one subsequent upper-case letters, unless at the end of the string.
+    // More than one subsequent capital letters, unless at the end of the string.
     return `-${lowerCase.slice(0, -1)}-${lowerCase.slice(-1)}`;
   }
 
-  return '-' + lowerCase;
+  return `-${lowerCase}`;
 }
 
-const hyphenateCSSName$cache = /*#__PURE__*/ new Map<string, string>();
+const hyphenateCSS$cache = /*#__PURE__*/ new Map<string, string>();

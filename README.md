@@ -83,11 +83,6 @@ Hypertext and other web-related codecs.
 
 ## Other
 
-- [`hyphenateName(string): string`][hyphenateName] - Hyphenates a camel-cased name
+- [`hyphenate(string): string`][hyphenate] - Hyphenates a camel-cased string.
 
-  **May add a leading hyphen** if the first letter of the name is in upper case.
-
-- [`hyphenateDecapName(string): string`][hyphenateDecapName] - De-capitalizes a camel-cased name and hyphenates it.
-
-[hyphenateDecapName]: https://hatsyjs.github.io/httongue/functions/hyphenateDecapName.html
-[hyphenateName]: https://hatsyjs.github.io/httongue/functions/hyphenateName.html
+[hyphenate]: https://hatsyjs.github.io/httongue/functions/hyphenate.html
