@@ -81,6 +81,16 @@ Hypertext and other web-related codecs.
 
 ## Other
 
+- [`capitalize(string): string`][capitalize] - Capitalizes input string.
+
+  Converts the first Unicode code point of input string to upper case.
+
+- [`decapitalize(string): string`][decapitalize] - De-capitalizes input string.
+
+  Converts the first Unicode code point of input string to lower case.
+
 - [`hyphenate(string): string`][hyphenate] - Hyphenates a camel-cased string.
 
+[capitalize]: https://hatsyjs.github.io/httongue/functions/capitalize.html
+[decapitalize]: https://hatsyjs.github.io/httongue/functions/decapitalize.html
 [hyphenate]: https://hatsyjs.github.io/httongue/functions/hyphenate.html
