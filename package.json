@@ -1,6 +1,6 @@
 {
-  "name": "@frontmeans/httongue",
-  "version": "2.4.0",
+  "name": "httongue",
+  "version": "3.0.0-dev.0",
   "description": "Hypertext tongue",
   "keywords": [
     "css-escape",
@@ -8,15 +8,15 @@
     "html-escape",
     "xml-escape"
   ],
-  "homepage": "https://github.com/frontmeans/htongue",
+  "homepage": "https://github.com/hatsyjs/httongue",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:frontmeans/htongue.git"
+    "url": "ssh://git@github.com:hatsyjs/httongue.git"
   },
   "license": "MIT",
   "author": "Ruslan Lopatin <ruslan.lopatin@gmail.com>",
   "bugs": {
-    "url": "https://github.com/frontmeans/htongue/issues"
+    "url": "https://github.com/hatsyjs/httongue/issues"
   },
   "type": "module",
   "types": "./dist/httongue.d.ts",
