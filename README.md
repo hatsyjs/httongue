@@ -16,7 +16,7 @@ Hypertext and other web-related codecs.
 [quality-img]: https://app.codacy.com/project/badge/Grade/67c2c4c63f1342569d693d27288749bf
 [quality-link]: https://app.codacy.com/gh/hatsyjs/httongue/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [coverage-img]: https://app.codacy.com/project/badge/Coverage/67c2c4c63f1342569d693d27288749bf
-[coverage-link]: https://www.codacy.com/gh/hatsyjs/httongue/dashboard?utm_source=github.com&utm_medium=referral&utm_content=hatsyjs/httongue&utm_campaign=Badge_Coverage
+[coverage-link]: https://app.codacy.com/gh/hatsyjs/httongue/dashboard?utm_source=gh&utm_medium=referral&utm_content=hatsyjs/httongue&utm_campaign=Badge_Coverage
 [github-image]: https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational
 [github-url]: https://github.com/hatsyjs/httongue
 [api-docs-image]: https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational
