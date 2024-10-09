@@ -47,15 +47,15 @@ export function escapeCSS(text: string): string {
 
     if (
       // Is in range [a-z] (U+0061 to U+007A),
-      (c > 0x60 && c < 0x7b)
+      (c > 0x60 && c < 0x7b) ||
       // or is "-" (U+002D),
-      || c === 0x2d
+      c === 0x2d ||
       // or is "_" (U+005F)
-      || c === 0x5f
+      c === 0x5f ||
       // or is in range [0-9] (U+0030 to U+0039),
-      || (c > 0x2f && c < 0x3a)
+      (c > 0x2f && c < 0x3a) ||
       // or is in range [A-Z] (U+0041 to U+005A)
-      || (c > 0x40 && c < 0x5b)
+      (c > 0x40 && c < 0x5b)
     ) {
       // then the character itself.
       out += text[i];
